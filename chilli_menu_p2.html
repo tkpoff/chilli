@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<meta charset="UTF-8">
+<title>Chilli — Σελίδα 2</title>
+<style>
+@font-face { font-family: 'CG'; font-style: normal; }
+@font-face { font-family: 'CG'; font-style: italic; }
+
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+  width:794px; height:1123px;
+  background:#0e0d0b;
+  font-family:'CG', serif;
+  color:#f0e8d6;
+  overflow:hidden;
+}
+.page {
+  position:relative;
+  width:794px; height:1123px;
+  background:#0e0d0b;
+}
+.frame-outer { position:absolute; inset:12px; border:1px solid rgba(201,168,76,0.45); pointer-events:none; z-index:10; }
+.frame-inner  { position:absolute; inset:17px; border:1px solid rgba(201,168,76,0.18); pointer-events:none; z-index:10; }
+
+.corner { position:absolute; width:22px; height:22px; z-index:11; }
+.corner.tl { top:8px; left:8px; }
+.corner.tr { top:8px; right:8px; transform:scaleX(-1); }
+.corner.bl { bottom:8px; left:8px; transform:scaleY(-1); }
+.corner.br { bottom:8px; right:8px; transform:scale(-1); }
+
+.header {
+  width:100%; text-align:center;
+  padding-top:20px; padding-bottom:10px;
+}
+.menu-title {
+  font-family:'CG', serif; font-size:34px; font-weight:300;
+  letter-spacing:14px; color:#e8c97a; text-transform:uppercase;
+}
+.menu-sub {
+  font-family:'CG', serif; font-style:italic; font-size:13px;
+  color:#b8a98a; letter-spacing:5px; margin-top:3px;
+}
+.orn { display:flex; align-items:center; justify-content:center; gap:5px; margin:6px 0; }
+.orn-line { height:1px; width:50px; background:linear-gradient(to right,transparent,#8a6e30); }
+.orn-line.r { background:linear-gradient(to left,transparent,#8a6e30); }
+.orn-dot { width:3px; height:3px; background:#8a6e30; border-radius:50%; }
+.orn-dia { width:5px; height:5px; background:#c9a84c; transform:rotate(45deg); opacity:0.8; }
+
+.columns {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:0 28px;
+  padding:0 42px;
+  padding-bottom:62px;
+}
+.col { min-width:0; }
+
+.sec { margin-bottom:14px; }
+.sec-head {
+  display:flex; align-items:center; gap:8px;
+  padding-bottom:5px; margin-bottom:5px;
+  border-bottom:1px solid rgba(201,168,76,0.25);
+}
+.sec-title {
+  font-family:'CG', serif; font-size:13px; font-weight:600;
+  letter-spacing:3px; color:#e8c97a; text-transform:uppercase;
+  white-space:nowrap; flex-shrink:0;
+}
+.sec-line { flex:1; height:1px; background:linear-gradient(to right, rgba(201,168,76,0.3), transparent); }
+
+.item {
+  display:flex; align-items:flex-start; gap:0;
+  padding:3.5px 0;
+  border-bottom:1px solid rgba(201,168,76,0.07);
+}
+.item:last-child { border-bottom:none; }
+.item-name {
+  font-family:'CG', serif; font-size:15px; font-weight:400;
+  color:#f5edd8; line-height:1.55; flex-shrink:0;
+}
+.item-sub {
+  display:block; font-family:'CG', serif; font-style:italic;
+  font-size:12.5px; color:#c9b98e; line-height:1.35;
+}
+.dots {
+  flex:1; border-bottom:1px dotted rgba(201,168,76,0.3);
+  margin:9px 5px 0; min-width:8px;
+}
+.price {
+  font-family:'CG', serif; font-size:14.5px; font-weight:600;
+  color:#d4ac52; white-space:nowrap; flex-shrink:0; line-height:1.4;
+}
+
+/* Ποτήρι | Μπουκάλι label */
+.price-header {
+  text-align:right;
+  font-family:'CG', serif; font-style:italic;
+  font-size:10.5px; color:#8a7a5a; letter-spacing:1px;
+  margin-bottom:4px; padding-right:2px;
+}
+
+.footer {
+  position:absolute; bottom:26px; left:42px; right:42px;
+  text-align:center; border-top:1px solid rgba(201,168,76,0.25);
+  padding-top:7px; z-index:20;
+}
+.footer-text {
+  font-family:'CG', serif; font-style:italic; font-size:11px;
+  color:#c9b98e; letter-spacing:1.5px; opacity:0.9;
+}
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="frame-outer"></div>
+  <div class="frame-inner"></div>
+
+  <svg class="corner tl" viewBox="0 0 22 22"><path d="M2,20 L2,2 L20,2" stroke="#c9a84c" stroke-width="0.8" fill="none" opacity="0.6"/><path d="M2,12 L2,2 L12,2" stroke="#c9a84c" stroke-width="0.4" fill="none" opacity="0.4"/></svg>
+  <svg class="corner tr" viewBox="0 0 22 22"><path d="M2,20 L2,2 L20,2" stroke="#c9a84c" stroke-width="0.8" fill="none" opacity="0.6"/><path d="M2,12 L2,2 L12,2" stroke="#c9a84c" stroke-width="0.4" fill="none" opacity="0.4"/></svg>
+  <svg class="corner bl" viewBox="0 0 22 22"><path d="M2,20 L2,2 L20,2" stroke="#c9a84c" stroke-width="0.8" fill="none" opacity="0.6"/><path d="M2,12 L2,2 L12,2" stroke="#c9a84c" stroke-width="0.4" fill="none" opacity="0.4"/></svg>
+  <svg class="corner br" viewBox="0 0 22 22"><path d="M2,20 L2,2 L20,2" stroke="#c9a84c" stroke-width="0.8" fill="none" opacity="0.6"/><path d="M2,12 L2,2 L12,2" stroke="#c9a84c" stroke-width="0.4" fill="none" opacity="0.4"/></svg>
+
+  <div class="header">
+    <div class="menu-title">Κρασιά</div>
+    <div class="menu-sub">Επιλεγμένοι Οίνοι</div>
+    <div class="orn">
+      <div class="orn-line"></div><div class="orn-dot"></div>
+      <div class="orn-dia"></div><div class="orn-dot"></div>
+      <div class="orn-line r"></div>
+    </div>
+  </div>
+
+  <div class="columns">
+
+    <!-- LEFT: Λευκά -->
+    <div class="col">
+      <div class="sec">
+        <div class="price-header">Ποτήρι &nbsp;|&nbsp; Μπουκάλι</div>
+        <div class="sec-head"><span class="sec-title">Λευκά Κρασιά</span><div class="sec-line"></div></div>
+        <div class="item"><div class="item-name">Καριπίδη Sauvignon Blanc</div><div class="dots"></div><div class="price">6 € | 25 €</div></div>
+        <div class="item"><div class="item-name">Βιβλία Χώρα Κτήμα<span class="item-sub">Λευκό</span></div><div class="dots"></div><div class="price">8 € | 35 €</div></div>
+        <div class="item"><div class="item-name">Ζαφειράκης "Παλαιόμυλος"<span class="item-sub">Μαλαγουζιά</span></div><div class="dots"></div><div class="price">7 € | 30 €</div></div>
+        <div class="item"><div class="item-name">Ζαφειράκης "Μικρή Αρκούδα"<span class="item-sub">Λευκό</span></div><div class="dots"></div><div class="price">5 € | 24 €</div></div>
+        <div class="item"><div class="item-name">Λαφαζάνης "Πρωρώγος"<span class="item-sub">Ημίγλυκος Λευκό</span></div><div class="dots"></div><div class="price">5 € | 14 €</div></div>
+        <div class="item"><div class="item-name">Τύρναβος Ροδοινός<span class="item-sub">Ημίγλυκος Λευκό (187ml)</span></div><div class="dots"></div><div class="price">5 €</div></div>
+        <div class="item"><div class="item-name">Μυθικό Βουνό<span class="item-sub">Λευκό</span></div><div class="dots"></div><div class="price">5 € | 27 €</div></div>
+        <div class="item"><div class="item-name">Μυθικό Βουνό<span class="item-sub">Μαλαγουζιά</span></div><div class="dots"></div><div class="price">5 € | 27 €</div></div>
+        <div class="item"><div class="item-name">Λευκός Οίνος Θρόνος</div><div class="dots"></div><div class="price">8 € | 30 €</div></div>
+      </div>
+
+      <!-- Αφρώδη -->
+      <div class="sec">
+        <div class="sec-head"><span class="sec-title">Αφρώδη & Σαμπάνιες</span><div class="sec-line"></div></div>
+        <div class="item"><div class="item-name">Moscato D'Asti Bosio</div><div class="dots"></div><div class="price">24 €</div></div>
+        <div class="item"><div class="item-name">Asti Martini Sparkling</div><div class="dots"></div><div class="price">24 €</div></div>
+        <div class="item"><div class="item-name">Moët &amp; Chandon Brut<span class="item-sub">Champagne</span></div><div class="dots"></div><div class="price">30 € | 120 €</div></div>
+      </div>
+    </div>
+
+    <!-- RIGHT: Ερυθρά & Ροζέ -->
+    <div class="col">
+      <div class="sec">
+        <div class="price-header">Ποτήρι &nbsp;|&nbsp; Μπουκάλι</div>
+        <div class="sec-head"><span class="sec-title">Ερυθρά & Ροζέ</span><div class="sec-line"></div></div>
+        <div class="item"><div class="item-name">Μυθικό Βουνό<span class="item-sub">Ερυθρό</span></div><div class="dots"></div><div class="price">5 € | 28 €</div></div>
+        <div class="item"><div class="item-name">Καριπίδης Merlot<span class="item-sub">Ερυθρό</span></div><div class="dots"></div><div class="price">7 € | 28 €</div></div>
+        <div class="item"><div class="item-name">Βιβλία Χώρα Κτήμα<span class="item-sub">Ερυθρό</span></div><div class="dots"></div><div class="price">8 € | 40 €</div></div>
+        <div class="item"><div class="item-name">Μυθικό Βουνό "Πάνθεον"<span class="item-sub">Ερυθρό Premium</span></div><div class="dots"></div><div class="price">8 € | 34 €</div></div>
+        <div class="item"><div class="item-name">Ζαφειράκης "Μικρή Αρκούδα"<span class="item-sub">Ερυθρό</span></div><div class="dots"></div><div class="price">5 € | 24 €</div></div>
+        <div class="item"><div class="item-name">Λαφαζάνης "Πρωρώγος"<span class="item-sub">Ημίγλυκος Ερυθρό</span></div><div class="dots"></div><div class="price">5 € | 14 €</div></div>
+        <div class="item"><div class="item-name">Τύρναβος Ροδοινός<span class="item-sub">Ημίγλυκος Ερυθρό (187ml)</span></div><div class="dots"></div><div class="price">5 €</div></div>
+        <div class="item"><div class="item-name">Μυθικό Βουνό<span class="item-sub">Ροζέ</span></div><div class="dots"></div><div class="price">5 € | 27 €</div></div>
+        <div class="item"><div class="item-name">Καριπίδης "Pink Pull"<span class="item-sub">Ροζέ</span></div><div class="dots"></div><div class="price">6 € | 25 €</div></div>
+        <div class="item"><div class="item-name">Πουλτσίδης Φρούτα Δάσους<span class="item-sub">Ημίγλυκος Ροζέ</span></div><div class="dots"></div><div class="price">6 € | 28 €</div></div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    <div class="orn">
+      <div class="orn-line"></div><div class="orn-dot"></div>
+      <div class="orn-dia"></div><div class="orn-dot"></div>
+      <div class="orn-line r"></div>
+    </div>
+    <div class="footer-text">Οι τιμές συμπεριλαμβάνουν Φ.Π.Α. &nbsp;·&nbsp; Καλή σας απόλαυση</div>
+  </div>
+</div>
+</body>
+</html>
